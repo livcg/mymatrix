@@ -1,0 +1,29 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.column.rotate {
+    transform: 
+    /* Magic Numbers */
+    translate(5px, 5px)
+    /* 90 is really 360 - 90 */
+    rotate(270deg);
+    height: 50px;
+}
+
+.row.rotate {
+    transform: 
+    /* Magic Numbers */
+    translate(5px, 5px)
+    /* 90 is really 360 - 90 */
+    rotate(270deg);
+}
+
+td.matrix {
+    border: 1px solid black;
+}
+
+input {
+    width: 55px;
+}
