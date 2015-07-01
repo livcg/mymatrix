@@ -9,7 +9,7 @@ table, th, td {
     translate(5px, 5px)
     /* 90 is really 360 - 90 */
     rotate(270deg);
-    height: 50px;
+    height: 80px; 
 }
 
 .row.rotate {
