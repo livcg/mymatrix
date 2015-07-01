@@ -6,15 +6,23 @@ $(document).ready(function() {
     // Dynamically set column labels based on row labels
     var val;
     for (i = 1; i <= 5; i++) {
-	val = $("input.g5i" + i).attr("value");
-	$("td.g5i" + i).html(val);
+	val = $("input.label.g5i" + i).attr("value");
+	$("td.label.g5i" + i).html(val);
 
-	$("input.g5i" + i).change( function() {
+	$("input.label.g5i" + i).change( function() {
 	    var val = $(this).val()
-	    $("td." + this.classList[0]).html(val); // TODO: Check for missing class
+	    $("td.label." + this.classList[0]).html(val); // TODO: Check for relevant class
 	});	
     }
 
-    // Toggle cells between 'X', 'O', 'X?', 'O?', and empty
-    
+    // Toggle cells between 'X', 'O', 'X?', 'O?', and ''
+    var symbols = [ 'X', 'O', 'X?', 'O?', '' ]
+    $("td.cell").click( function() {
+	current = $(this).text();
+	for (i = 0; i < symbols.length; i++) {
+	    if (current == symbols[i]) {
+		$(this).html(symbols[(i+1)%symbols.length]);
+	    }
+	}
+    });
 });
